@@ -1,0 +1,10 @@
+--
+-- Retrieve metadata for Cannabis 3K individuals.
+--
+SELECT
+  SRA_Sample_s AS {{ KEY_COLUMN }},
+  Subspecies AS {{ SUPER_POPULATION_COLUMN }},
+  Strain AS {{ POPULATION_COLUMN }},
+  NULL AS {{ GENDER_COLUMN }}
+FROM
+  `cannabis-3k.cannabis_3k_results.sample_info`
